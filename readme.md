@@ -28,7 +28,7 @@ calculateBearing(lat1, long1, lat2, long2)
 ----- parameters: 
             Lat1 – the latitude of the first location 
               Long1 – the longitude of the first location
-              Lat2 - the latitude of the second location
+              Lat2 - the latitude of the second location 
               Long2 – the longitude of the second location
 
 generateRandom(lower_bound, upper_bound)
