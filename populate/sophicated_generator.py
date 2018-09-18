@@ -38,10 +38,6 @@ def random_select(list):
 
     index =  random.randint(0, length - 1)
 
-    #print(index)
-
-    #print(list[index])
-
     return list[index]
 
 

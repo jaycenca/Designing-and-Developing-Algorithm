@@ -10,11 +10,11 @@ visual = imp.load_source('draw', '../trajectory/draw.py')
 calculation = imp.load_source('calculation', '../distance/calculation.py')
 generator = imp.load_source('generator', '../populate/sophicated_generator.py')
 
-_lower_boundary_coordinate = (43.757643, -79.169527)
-_upper_boundary_coordinate = (43.766771, -79.324935)
+#_lower_boundary_coordinate = (43.757643, -79.169527)
+#_upper_boundary_coordinate = (43.766771, -79.324935)
 
 #populate trajectories
-def getTrajectory(API_KEY, mode, waypoints, thershold, number_of_trajectory, filename):
+def getTrajectory(API_KEY, mode, waypoints, thershold, number_of_trajectory, filename, _upper_boundary_coordinate, _lower_boundary_coordinate):
     trajectories = []
     #open a text file formated in .csv 
     with open(filename + '.csv', 'w') as csvfile:
@@ -32,7 +32,7 @@ def getTrajectory(API_KEY, mode, waypoints, thershold, number_of_trajectory, fil
 #generate start and end of the trajectory 
 #AND ensure that start and end are not the same location
 #ALSO check if there is a path exists from start to end
-def generateStartEnd(mode, thershold):
+def generateStartEnd(mode, thershold,):
     start = calculation.generateRandom(_lower_boundary_coordinate, _upper_boundary_coordinate)
 
     end = calculation.generateRandom(_lower_boundary_coordinate, _lower_boundary_coordinate)

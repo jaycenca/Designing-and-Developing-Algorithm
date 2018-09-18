@@ -3,10 +3,6 @@ import polyline
 import imp 
 import math
 
-#declare constant variables
-#_API_KEY = 'AIzaSyBM2EVG_35lLPzdAPgNJu7YFjRNvTwEA_E'
-#_gmaps = googlemaps.Client(key=_API_KEY)  
-
 _path = imp.load_source('path', '../distance/calculation.py')
 
 '''
